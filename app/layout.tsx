@@ -26,6 +26,11 @@ export async function generateMetadata(): Promise<Metadata> {
     alternates: {
       canonical: data.canonical,
     },
+    icons: {
+      icon: [
+        { rel: "icon", url: "/icon.png" },
+      ],
+    },
   };
 }
 
@@ -36,6 +41,7 @@ type Props = {
 export default async function RootLayout({ children }: Props) {
   return (
     <html lang="ja">
+      
       <Script
         type="text/javascript"
         id="hs-script-loader"
